@@ -62,7 +62,7 @@ public class TreeCollisionEnter : MonoBehaviour
                    Quaternion.identity) as GameObject;
 
             drop.tag = "Material";
-            drop.name = "Wood";
+            drop.name = "Material_wood";
 
                    
             Destroy(this.gameObject);

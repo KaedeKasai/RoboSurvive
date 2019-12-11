@@ -23,4 +23,9 @@ public class MaterialScript : MonoBehaviour
 
     }
 
+    public string GetName()
+    {
+        return MaterialName;
+    }
+
 }

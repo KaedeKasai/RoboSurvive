@@ -20,6 +20,8 @@ public class TreeTerrain : MonoBehaviour
 
             // TreeInstanceの取得
             TreeInstance treeInstance = terrain.terrainData.treeInstances[i];
+
+            
             
 
             // Capsuleの生成
@@ -32,13 +34,23 @@ public class TreeTerrain : MonoBehaviour
 
             // CapsuleのColliderを設定
             CapsuleCollider capsuleCollider = capsule.GetComponent<CapsuleCollider>();
+            capsuleCollider.isTrigger = false;
             capsuleCollider.center = new Vector3(0, 5, 0);
             capsuleCollider.height = 10;
             capsuleCollider.radius = 0.5f;
 
             // CapsuleにComponentを追加
             TreeCollisionEnter tree = capsule.AddComponent<TreeCollisionEnter>();
+            
             tree.treeIndex = i;
+
+            //1204_kasaiが追加したコード
+            capsule.AddComponent<Rigidbody>();
+            capsule.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
+
+
+
         }
     }
 

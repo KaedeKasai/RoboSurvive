@@ -22,12 +22,16 @@ public class CraftingScript : MonoBehaviour
         _craftButton = GameObject.Find("CraftButton").GetComponent<Button>();
 
         //ボタンを押されるとOnClickButtonを実行
-        _craftButton.onClick.AddListener(OnClickButton);
+        //_craftButton.onClick.AddListener(OnClickButton);
     }
 
-    //void Update()
-    //{  
-    //}
+    void Update()
+    {
+        if (OVRInput.GetDown(OVRInput.RawButton.A))
+        {
+            OnClickButton();
+        }
+    }
 
 
     void OnClickButton()
@@ -60,7 +64,7 @@ public class CraftingScript : MonoBehaviour
             {
                 //Debug.Log(_CanCraftMaterialString.Contains(recipeMaterial.transform.GetComponentInChildren<MaterialScript>().MaterialName));
 
-                if (!_CanCraftMaterialString.Contains(recipeMaterial.transform.GetComponentInChildren<MaterialScript>().MaterialName))
+                if (!_CanCraftMaterialString.Contains(recipeMaterial.transform.GetComponentInChildren<MaterialScript>().GetName()))
                 {
                     existsMaterial = false;
                 }
@@ -72,8 +76,8 @@ public class CraftingScript : MonoBehaviour
 
 
 
-                Destroy(_CanCraftMaterialList[0].transform.parent.gameObject);
-                Destroy(_CanCraftMaterialList[1].transform.parent.gameObject);
+                Destroy(_CanCraftMaterialList[0].transform.gameObject);
+                Destroy(_CanCraftMaterialList[1].transform.gameObject);
 
                 _CanCraftMaterialList = new List<GameObject>();
 
@@ -149,7 +153,7 @@ public class CraftingScript : MonoBehaviour
 
     string GetMaterialName(GameObject material)
     {
-        return material.GetComponent<MaterialScript>().MaterialName;
+        return material.GetComponent<MaterialScript>().GetName();
     }
 
 

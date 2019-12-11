@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f2260acbab8d4a040a89e5c4a3b33e39
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - directionalLight: {instanceID: 0}
+  - material1: {fileID: 2100000, guid: 6d3534b5886f29d4dac5445f22945aee, type: 2}
+  - material2: {fileID: 2100000, guid: 65c31a319f396b240adff15355943a6b, type: 2}
+  - material3: {fileID: 2100000, guid: bd2f5c1e515e7ae45a793bc64649d8f9, type: 2}
+  - material4: {fileID: 2100000, guid: 4eadeda8503cfc248a61ce48d0fe6220, type: 2}
+  - material5: {fileID: 2100000, guid: 16a290999a24c34468c6bfe1034be29e, type: 2}
+  - material6: {fileID: 2100000, guid: a6282a1a43d8ded4f89450df5c459e96, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

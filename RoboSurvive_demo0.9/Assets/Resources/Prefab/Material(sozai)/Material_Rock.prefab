@@ -14,10 +14,11 @@ GameObject:
   - component: {fileID: 2096240473207191729}
   - component: {fileID: 2096240473207191728}
   - component: {fileID: 2096240473207191731}
-  - component: {fileID: 2096240473207191732}
+  - component: {fileID: 8183969264406845906}
+  - component: {fileID: 8254392169613689926}
   m_Layer: 0
   m_Name: Material_Rock
-  m_TagString: Untagged
+  m_TagString: Material
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,11 +118,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2096240473207191732
+--- !u!114 &8183969264406845906
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 965029916007942122, guid: 62477dc0e8a634046a85b06c61b5b35d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096240473207191730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
+--- !u!114 &8254392169613689926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2096240473207191730}
@@ -145,11 +162,11 @@ GameObject:
   - component: {fileID: 2096240473924763077}
   m_Layer: 0
   m_Name: MaterialScript
-  m_TagString: MaterialTrigger
+  m_TagString: Material
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2096240473924763079
 Transform:
   m_ObjectHideFlags: 0
