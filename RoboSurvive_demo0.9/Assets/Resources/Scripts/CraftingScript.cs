@@ -27,14 +27,14 @@ public class CraftingScript : MonoBehaviour
 
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.RawButton.A))
+        if (OVRInput.GetDown(OVRInput.RawButton.A) || _craftButton.enabled)
         {
-            OnClickButton();
+            OnClick();
         }
     }
 
 
-    void OnClickButton()
+    void OnClick()
     {
         //recipeListに登録されているレシピから作れるものを検索
         GameObject recipeList = GameObject.Find("RecipeList");
@@ -90,11 +90,6 @@ public class CraftingScript : MonoBehaviour
 
                 Debug.Log(recipeScript.GetCreateObject().name + "をクラフトしました。");
 
-
-
-            }
-            else
-            {
 
 
             }
