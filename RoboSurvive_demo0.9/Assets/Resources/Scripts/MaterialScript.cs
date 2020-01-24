@@ -7,9 +7,11 @@ using UnityEngine;
 public class MaterialScript : MonoBehaviour
 {
     //BoxCollider bc;
+    [SerializeField]
 
-    public string MaterialName;
-
+    private string MaterialName;
+    private string MaterialNameKey;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +22,20 @@ public class MaterialScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
+
 
     public string GetName()
     {
         return MaterialName;
     }
+
+    public string GatMaterialNameKey()
+    {
+        return MaterialNameKey;
+    }
+
+    
 
 }

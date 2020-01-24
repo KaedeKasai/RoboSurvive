@@ -27,7 +27,8 @@ public class CraftingScript : MonoBehaviour
 
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.RawButton.A) || _craftButton.enabled)
+        if (OVRInput.GetDown(OVRInput.RawButton.B)
+            || Input.GetKeyDown(KeyCode.C))
         {
             OnClick();
         }
@@ -76,8 +77,8 @@ public class CraftingScript : MonoBehaviour
 
 
 
-                Destroy(_CanCraftMaterialList[0].transform.gameObject);
-                Destroy(_CanCraftMaterialList[1].transform.gameObject);
+                Destroy(_CanCraftMaterialList[0].transform.parent.gameObject);
+                Destroy(_CanCraftMaterialList[1].transform.parent.gameObject);
 
                 _CanCraftMaterialList = new List<GameObject>();
 
@@ -143,14 +144,14 @@ public class CraftingScript : MonoBehaviour
             listContents += GetMaterialName(Material) + ",";
         }
 
-        Debug.Log("マテリアル対象:" + listContents);
+        Debug.Log("マテリアル対象:" + listContents + "\n総数:" + _CanCraftMaterialList.Count);
+
     }
+
 
     string GetMaterialName(GameObject material)
     {
         return material.GetComponent<MaterialScript>().GetName();
     }
-
-
 
 }

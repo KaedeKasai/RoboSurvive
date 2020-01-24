@@ -15,10 +15,9 @@ GameObject:
   - component: {fileID: 2096240473207191728}
   - component: {fileID: 2096240473207191731}
   - component: {fileID: 8183969264406845906}
-  - component: {fileID: 8254392169613689926}
   m_Layer: 0
   m_Name: Material_Rock
-  m_TagString: Material
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,19 +134,6 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
---- !u!114 &8254392169613689926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096240473207191730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98af136c061c8554095f46f58ebecdab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaterialName: rock
 --- !u!1 &2096240473924763078
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2096240473924763079
 Transform:
   m_ObjectHideFlags: 0
