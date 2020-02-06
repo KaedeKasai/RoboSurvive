@@ -80,17 +80,18 @@ public class PlayerStatus : MonoBehaviour
         fpc = GetComponent<FirstPersonController>();
         if (status[1] <= 1f)
         {
-            //テストができないため一時的にコメントアウト
-            //fpc.m_WalkSpeed = 3f;
-            //fpc.m_RunSpeed = 3f;
+            fpc.m_WalkSpeed = 3f;
+            fpc.m_RunSpeed = 3f;
         }
         else if (Input.GetKey(KeyCode.LeftShift))
         {
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) {
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+            {
                 status[1] -= 0.1f;
                 _sliderS.value = status[1] / 100;
             }
-        }else if(status[1] <= 100f)
+        }
+        else if(status[1] <= 100f)
         {
             status[1] += 0.01f;
             _sliderS.value = status[1]/100;
@@ -104,9 +105,8 @@ public class PlayerStatus : MonoBehaviour
         {
             status[1] = 100f;
             _sliderS.value = 1;
-            //テストができないため一時的にコメントアウト
-            //fpc.m_WalkSpeed = 5f;
-            //fpc.m_RunSpeed = 10f;
+            fpc.m_WalkSpeed = 5f;
+            fpc.m_RunSpeed = 10f;
             
         }
 
@@ -191,9 +191,9 @@ public class PlayerStatus : MonoBehaviour
                     StartCoroutine( Damage(3f,1f));
                     _debuff.color = new Color(255, 255, 0, 255);
                     _debuff.texture = (Texture)Resources.Load("CFX2_T_HeartBrokenSlice");
-                    //テストができないため一時的にコメントアウト
-                    //fpc.m_WalkSpeed = fpc.m_WalkSpeed / 2;
-                    //fpc.m_RunSpeed = fpc.m_RunSpeed / 2;
+         
+                    fpc.m_WalkSpeed = fpc.m_WalkSpeed / 2;
+                    fpc.m_RunSpeed = fpc.m_RunSpeed / 2;
                     break;
                 case "noise":
                     StartCoroutine(Damage(10f, 1f));
@@ -253,9 +253,8 @@ public class PlayerStatus : MonoBehaviour
     private void reset()
     {
         _debuff.color = new Color(0, 0, 0, 0);
-        //テストができないため一時的にコメントアウト
-        //fpc.m_WalkSpeed = 5f;
-        //fpc.m_RunSpeed = 10f;
+        fpc.m_WalkSpeed = 5f;
+        fpc.m_RunSpeed = 10f;
         Destroy(_effect);
     }
 

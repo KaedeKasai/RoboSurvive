@@ -21,7 +21,8 @@ public class TreeCollisionEnter : MonoBehaviour
         hard = 5.0f;
         timeOut = 1.0f;
         timeElapsed = 0.0f;
-        dropMaterial = (GameObject)Resources.Load("Material_wood");
+        //dropMaterial = (GameObject)Resources.Load("Material_wood");
+        dropMaterial = (GameObject)Resources.Load("Prefab");
     }
 
     // Update is called once per frame
@@ -61,7 +62,7 @@ public class TreeCollisionEnter : MonoBehaviour
                    this.gameObject.transform.position.z),
                    Quaternion.identity) as GameObject;
 
-            drop.tag = "Material";
+            
             drop.name = "Material_wood";
 
                    

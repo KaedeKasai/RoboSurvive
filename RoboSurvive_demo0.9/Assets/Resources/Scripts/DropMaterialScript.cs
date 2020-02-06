@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DropMaterialScript : MonoBehaviour
 {
-
+    public string tagName = "Tool";
     public GameObject dropMaterial;
     public int _durability;
 
@@ -29,15 +29,13 @@ public class DropMaterialScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Tool")
-
-            
+        if (other.gameObject.tag == tagName)
 
         {
-            //Instantiate(BreakFX, new Vector3(
-                    //other.transform.position.x,
-                   // other.transform.position.y,
-                    //other.transform.position.z), Quaternion.identity);
+            Instantiate(BreakFX, new Vector3(
+                    other.transform.position.x,
+                    other.transform.position.y,
+                    other.transform.position.z), Quaternion.identity);
 
             hitTimes += 1;
             if (_durability <= hitTimes)
